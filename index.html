@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Calculator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css"/>
+    <script type="module" defer src="index.js"></script>
+  </head>
+  <body>
+   <div class="container-fluid calc-style">
+      <div class="row">
+         <input name="calculation" id="calculation" class="col-8 offset-2" placeholder="0" readonly></input>
+      </div>
+      <div class="row">
+         <div class="col-2 border offset-2 text-bg-secondary hovering" id="plus">+</div>
+         <div class="col-2 border text-bg-secondary hovering" id="minus">-</div>
+         <div class="col-2 border text-bg-secondary hovering" id="times">&#215</div>
+         <div class="col-2 border text-bg-secondary hovering" id="divided">&#247</div>
+      </div>
+      <div class="row">
+         <div class="col-2 offset-2 text-bg-secondary">
+            <div class="row border"><div class="col-12" id="seven">7</div></div>
+            <div class="row border"><div class="col-12" id="four">4</div></div>
+            <div class="row border"><div class="col-12" id="one">1</div></div>
+            <div class="row border"><div class="col-12" id="dot">.</div></div>
+         </div>
+         <div class="col-2 text-bg-secondary">
+            <div class="row border"><div class="col-12" id="eight">8</div></div>
+            <div class="row border"><div class="col-12" id="five">5</div></div>
+            <div class="row border"><div class="col-12" id="two">2</div></div>
+            <div class="row border"><div class="col-12" id="zero">0</div></div>
+         </div>
+         <div class="col-2 text-bg-secondary">
+            <div class="row border"><div class="col-12" id="nine">9</div></div>
+            <div class="row border"><div class="col-12" id="six">6</div></div>
+            <div class="row border"><div class="col-12" id="three">3</div></div>
+            <div class="row border"><div class="col-12" id="clear">AC</div></div>
+         </div>
+         <div class="col-2 border bg-warning hovering-yellow" id="equals">=</div>
+      </div>
+   </div>
+  </body>
+</html>

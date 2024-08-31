@@ -1,0 +1,39 @@
+use parseFloat!!!
+
+/*LOGIC FOR TYPING INTO THE CALCULATOR*/
+
+-for each number add and onclick function to add it into the input (if possible)
+
++*/. -if first character - don't add
+     -if there is a non-number value before - don't add
+
+rules for the "-" sign - not allowed after 2 non-number values
+               - not allowed 2 times in a row at the beggining (first 2 characters)
+
+/*LOGIC FOR MAKING THE ARRAYS*/
+
+When clicking "=" check for random non-number signs at the end and remove them if there are any
+
+2 arrays - numbers (e.g. [12, 33, -2, 42, 4, 22]) and operations (e.g. ['+', '/', '*', '+', '-'])
+   number by number until we get to an opetarion - check (for operations)
+   if it is a minus (first character) -> go to the end of the number and push it
+   if it is a minus (not first character):
+      push the number
+      check right:
+         if it is a minus -> push operation -> skip to i+=2, continue
+         if it is a number -> push operation -> i++, continue
+   if it is any other sign (except "."):
+      push the number
+      check right:
+         if it is a minus -> push operation -> skip to i+=2, continue
+         if it is a number -> push operation -> i++, continue
+
+/*LOGIC FOR CALCULATING WITH THE MADE ARRAYS*/
+
+the idea is to just go left to right with the made arrays and preform * and / operations first, then second loop do + and -
+e.g. [12, -16.5, 42, 4, 22] i ['+', '*', '+', '-']
+Provjera za * ili / - the first operation is on index 1, so preform that operation on the numbers at index 1 and 2
+                      remove one number from the numbers array, replace the other one with the calculated number and remove the used operation from the operationsToPerform array
+                      repeat until the end of the operationsToPerform array
+                      second pass take into consider all operations (+ and - in this case) and go until there is only 1 number in the numbers array
+                      return numbers[0]
